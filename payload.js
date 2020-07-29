@@ -220,7 +220,6 @@ var areaOfInterest = {
 "Project Management":"PM.GR",
 "Psychology":"PSY.GR",
 "Public Administration":"PA.GR",
-"Supply Chain Management":"SCM.GR",
 "Taxation":"TX.GR",
 }
 if(! interestLabel) {  
@@ -293,8 +292,6 @@ var programOfInterest = {
 'Graduate Certificate in Public Administration Leadership': 'CERTG.PADL',
 'Graduate Certificate in Urban Innovations': 'CERTG.URBAN',
 'Undergraduate Certificate in Public Administration Leadership': 'CERTU.PADL',
-'Certificate in Global Supply Chain Management': 'CERTG.GSCM',
-'Certificate in Operations & Supply Chain Management': 'CERTU.OPMG',
 'MS in Taxation': 'MS.TAX',
 'Certificate in Taxation': 'CERTG.TAX',
 'Certificate in Advanced Studies in Taxation': 'CERTG.ADTAX',
@@ -425,10 +422,6 @@ $('select#programofinterest option[value="MPA.EMPA"], select#programofinterest o
 $('select#programofinterest option[value="MPA.EMPA"], select#programofinterest option[value="CERTG.PADL"], select#programofinterest option[value="CERTG.URBAN"]').addClass('graduatePA');
 $('select#programofinterest option[value="CERTU.PADL"]').addClass('undergraduatePA');
 
-// Add classes to programs related with Public Supply Chain Management
-$('select#programofinterest option[value="CERTU.OPMG"], select#programofinterest option[value="CERTG.GSCM"]').addClass('scm');
-$('select#programofinterest option[value="CERTG.GSCM"]').addClass('graduateSCM');
-$('select#programofinterest option[value="CERTU.OPMG"]').addClass('undergraduateSCM');
 
 // Add classes to programs related with Public Taxation
 $('select#programofinterest option[value="MS.TAX"], select#programofinterest option[value="CERTG.ADTAX"], select#programofinterest option[value="CERTG.ESTAT"], select#programofinterest option[value="CERTG.INTAX"], select#programofinterest option[value="CERTG.SALT"], select#programofinterest option[value="CERTG.TAX"]').addClass('tax');
@@ -522,11 +515,6 @@ else{
     $('option.graduatePA').wrapAll('<optgroup label="Graduate" />');
     $('option.undergraduatePA').wrapAll('<optgroup label="Undergraduate" />');
   }
-  else if($('#FOS option[value="Supply Chain Management"]').is(':selected')){
-    $('option.scm').unwrap();
-    $('option.graduateSCM').wrapAll('<optgroup label="Graduate" />');
-    $('option.undergraduateSCM').wrapAll('<optgroup label="Undergraduate" />');
-  }
   else if($('#FOS option[value="Taxation"]').is(':selected')){
     $('option.tax').unwrap();
     $('option.graduateTAX').wrapAll('<optgroup label="Graduate" />');
@@ -545,11 +533,7 @@ if ($(this).val() == 'CERTG.FAR'){
   $('#academiclevel').val('GR');
   $('#ggu_programtype').val('C-GRAD');
 }
-else if ($(this).val() == 'CERTG.GSCM'){
-  $('#ggu_AreaofInterest').val('SCM.GC');
-  $('#academiclevel').val('GR');
-  $('#ggu_programtype').val('C-GRAD');
-}
+
 else if ($(this).val() == 'CERTG.INA'){
   $('#ggu_AreaofInterest').val('ACTG.GC');
   $('#academiclevel').val('GR');
@@ -845,11 +829,7 @@ else if ($(this).val() == 'CERTG.ACA'){
   $('#academiclevel').val('GR');
   $('#ggu_programtype').val('C-GRAD');
 }
-else if ($(this).val() == 'CERTU.OPMG'){
-  $('#ggu_AreaofInterest').val('OP.UC');
-  $('#academiclevel').val('UG');
-  $('#ggu_programtype').val('C-UG');
-}
+
 else if ($(this).val() == 'MS.TAX'){
   $('#ggu_AreaofInterest').val('TX.GR');
   $('#academiclevel').val('GR');
