@@ -1,0 +1,83 @@
+#full_name,#emailaddress1,#ggu_phone{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #dfdfdf;
+    background-color: white !important;
+}
+ 
+.validation-error{
+ 	display: table;
+    color: red;
+    z-index: 2;
+    width: 100%;
+    text-align: right;
+    margin-top: -19px;
+  }
+  
+label.opt-label.form-builder-radio-label {
+    top: 0;
+    position: absolute;
+}
+  
+div#group_veteranflag {
+    top: 43px !important;
+}
+  
+#label_veteranflag >span{
+    font-family: Open Sans;
+    font-weight: 300 !important;
+    font-size: 14px;
+    line-height: 15px;
+    color: #080000;
+}
+
+  #lp-pom-box-27 {
+    display: block;
+    background: rgba(244,244,244,1);
+    border-style: solid none none none;
+    border-width: 7px;
+    border-color: #003468;
+    border-radius: 0px;
+    left: 198px;
+    top: 40.5px;
+    height: 620px;
+    z-index: 5;
+    position: absolute;
+}
+
+div#lp-pom-text-28 {
+    margin-left: 20px;
+    width: 291px;
+}
+
+.fields >div,
+.fields input,
+.fields select,
+.fields .radio-group label,
+.fields #group_veteranflag{
+    max-width: 320px;
+    margin-left: 10px;
+}
+
+button#lp-pom-button-16 {
+    display: block;
+    border-style: none;
+    border-radius: 5px;
+    left: 0px;
+    z-index: 7;
+    width: 320px;
+    height: 62px;
+    position: absolute;
+    background: rgba(0,52,104,1);
+    box-shadow: none;
+    text-shadow: none;
+    color: #fff;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 400;
+    font-family: Open Sans;
+    font-style: normal;
+    text-align: center;
+    background-repeat: no-repeat;
+    margin-left: 20px;
+}
